@@ -18,10 +18,10 @@
 
     label {
       cursor: pointer;
+    }
 
-      strong {
-        color: rgba(255, 255, 255, 1);
-      }
+    strong {
+      color: rgba(255, 255, 255, 1);
     }
 
     &.not {
@@ -49,5 +49,23 @@
         box-shadow: none;
       }
     }
+  }
+
+  input {
+    background: transparent;
+    border-bottom: 2pt solid rgba(255, 255, 255, 0.5);
+    padding: 2pt 0;
+    outline: 0;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+
+    &:focus {
+      background: rgba(255, 255, 255, 0.15);
+    }
+  }
+
+  strong.input {
+    cursor: text;
   }
 }
