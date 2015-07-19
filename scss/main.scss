@@ -1,7 +1,9 @@
 @import '_reset';
+@import '_shadow';
 @import '_base';
 @import '_leaflet';
 @import '_leaflet.label';
+@import '_filters';
 
 $minscreenwidth: 630pt;
 $sidebarwidth: 420pt;
@@ -12,25 +14,28 @@ $buttondistance: 12pt;
 @import '_map';
 @import '_forcegraph';
 
-.contenttoggle {
-  z-index: 100;
-  position: absolute;
-  top: $buttondistance;
-  right: $buttondistance;
-}
-
-.contenttoggle.next-graph:after {
-  content: '\f341';
-}
-
-.contenttoggle.next-map:after {
-  content: '\f203';
-}
-
 .content {
   position: fixed;
   width: 100%;
   height: 100vh;
+
+  .buttons {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+
+    z-index: 100;
+    position: absolute;
+    top: $buttondistance;
+    right: $buttondistance;
+
+    button {
+      margin-left: $buttondistance;
+    }
+  }
+}
+
+.tabs, header {
+  background: rgba(0, 0, 0, 0.02);
 }
 
 .tabs {
@@ -39,8 +44,7 @@ $buttondistance: 12pt;
   list-style: none;
   display: flex;
   font-family: Roboto;
-  background: rgba(0, 0, 0, 0.02);
-  box-shadow: 0px 0.5px 3px rgba(0, 0, 0, 0.16), 0px 0.5px 2px rgba(0, 0, 0, 0.24);
+  @include shadow(1);
 }
 
 .tabs li {
@@ -59,14 +63,6 @@ $buttondistance: 12pt;
 .tabs .visible {
   border-bottom: 2pt solid #dc0067;
   color: #dc0067;
-}
-
-.tab {
-  display: none;
-}
-
-.tab.visible {
-  display: block;
 }
 
 body {
@@ -121,9 +117,13 @@ table.attributes td {
 
 .sidebar {
   .infobox, .container {
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.19), 0px 3px 6px rgba(0, 0, 0, 0.23);
-    background: rgba(255, 255, 255, 0.9);
+    @include shadow(2);
+    background: rgba(255, 255, 255, 0.97);
     border-radius: 2px;
+  }
+
+  .container.hidden {
+    display: none;
   }
 
   p {
@@ -151,7 +151,7 @@ table.attributes td {
 button {
   -webkit-tap-highlight-color: transparent;
   font-family: "ionicons";
-  box-shadow: 0px 0.5px 3px rgba(0, 0, 0, 0.16), 0px 0.5px 2px rgba(0, 0, 0, 0.24);
+  @include shadow(1);
   border-radius: 0.9em;
   background: rgba(255, 255, 255, 0.7);
   border: none;
@@ -170,7 +170,7 @@ button.active {
 button:hover {
   background: white;
   color: #dc0067;
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.19), 0px 3px 6px rgba(0, 0, 0, 0.23);
+  @include shadow(2);
 }
 
 button:active {
@@ -184,27 +184,22 @@ button::-moz-focus-inner {
 button.close {
   width: auto;
   height: auto;
-  font-size: 14pt;
+  font-size: 20pt;
   float: right;
-  padding: $buttondistance/2 $buttondistance;
   margin-right: $buttondistance;
   margin-top: $buttondistance;
   box-shadow: none;
   background: transparent;
   border-radius: 0;
   color: rgba(0, 0, 0, 0.5);
-  font-family: Roboto;
+  font-family: "ionicons";
 
   &:hover {
     color: #dc0067;
   }
 
-  &:active {
-    background: rgba(0, 0, 0, 0.04);
-  }
-
   &:after {
-    content: "CLOSE";
+    content: '\f2d7';
   }
 }
 
@@ -296,7 +291,6 @@ table {
 
 .sidebar td:not(:first-child), .sidebar th:not(:first-child) {
   text-align: right;
-  white-space: nowrap;
 }
 
 .sidebar a {
@@ -358,7 +352,7 @@ table {
     margin: 0pt;
     width: $sidebarwidthsmall;
     min-height: 100vh;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.19), 0px 3px 6px rgba(0, 0, 0, 0.23);
+    @include shadow(2);
     background: white;
 
     .sidebarhandle {
@@ -369,10 +363,6 @@ table {
       margin: 0;
       box-shadow: none;
       border-radius: 0;
-    }
-
-    .infobox {
-      background: rgba(0, 0, 0, 0.02);
     }
   }
 }
