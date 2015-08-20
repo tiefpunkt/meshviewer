@@ -28,7 +28,7 @@ define({
    ],
   "mapLayers": [
     {
-      "name": "Karte (Humanitarian)",
+      "name": "Karte (OSM Humanitarian)",
       "provider": "OpenStreetMap.HOT",
       "config": {
         "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap contributors</a>. Tiles courtesy of <a href=\"http://hot.openstreetmap.org\" target=\"_blank\">Humanitarian OpenStreetMap Team</a>",
@@ -51,7 +51,7 @@ define({
       }
     },
     {
-      "name": "Satelit (Bing)",
+      "name": "Satellit (Bing)",
       "provider": "Bing",
       "config": {
         "key": "Aiex7HstTT61uOhqmHRbtxFsOO8nd1LLpf_C1n30HPbzX0hvTO4TAAAWJWDZ0J5N",
