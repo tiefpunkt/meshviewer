@@ -6,23 +6,23 @@ define({
   "maxAge": 14,
   "nodeInfos": [
     { "name": "Clientstatistik (24 Stunden)",
-      "thumbnail": "http://stats.ffmuc.net/render/dashboard-solo/db/node?panelId=1&var-node_id={NODE_ID}&width=400&height=200&theme=light",
-      "href": "http://stats.ffmuc.net/dashboard/db/node?panelId=1&fullscreen&var-node_id={NODE_ID}",
+      "thumbnail": "https://ffmuc.net/stats/render/dashboard-solo/db/node?panelId=1&var-node_id={NODE_ID}&width=400&height=200&theme=light",
+      "href": "https://ffmuc.net/stats/dashboard/db/node?panelId=1&fullscreen&var-node_id={NODE_ID}",
       "caption": "Knoten {NODE_ID}"
     },
     { "name": "Clientstatistik (7 Tage)",
-      "thumbnail": "http://stats.ffmuc.net/render/dashboard-solo/db/node?panelId=3&var-node_id={NODE_ID}&width=400&height=200&theme=light",
-      "href": "http://stats.ffmuc.net/dashboard/db/node?panelId=3&fullscreen&var-node_id={NODE_ID}",
+      "thumbnail": "https://ffmuc.net/stats/render/dashboard-solo/db/node?panelId=3&var-node_id={NODE_ID}&width=400&height=200&theme=light",
+      "href": "https://ffmuc.net/stats/dashboard/db/node?panelId=3&fullscreen&var-node_id={NODE_ID}",
       "caption": "Knoten {NODE_ID}"
     },
     { "name": "Trafficstatistik (24 Stunden)",
-      "thumbnail": "http://stats.ffmuc.net/render/dashboard-solo/db/node?panelId=2&var-node_id={NODE_ID}&width=400&height=200&theme=light",
-      "href": "http://stats.ffmuc.net/dashboard/db/node?panelId=2&fullscreen&var-node_id={NODE_ID}",
+      "thumbnail": "https://ffmuc.net/stats/render/dashboard-solo/db/node?panelId=2&var-node_id={NODE_ID}&width=400&height=500&theme=light",
+      "href": "https://ffmuc.net/stats/dashboard/db/node?panelId=2&fullscreen&var-node_id={NODE_ID}",
       "caption": "Knoten {NODE_ID}"
     },
     { "name": "Trafficstatistik (7 Tage)",
-      "thumbnail": "http://stats.ffmuc.net/render/dashboard-solo/db/node?panelId=4&var-node_id={NODE_ID}&width=400&height=200&theme=light",
-      "href": "http://stats.ffmuc.net/dashboard/db/node?panelId=4&fullscreen&var-node_id={NODE_ID}",
+      "thumbnail": "https://ffmuc.net/stats/render/dashboard-solo/db/node?panelId=4&var-node_id={NODE_ID}&width=400&height=500&theme=light",
+      "href": "https://ffmuc.net/stats/dashboard/db/node?panelId=4&fullscreen&var-node_id={NODE_ID}",
       "caption": "Knoten {NODE_ID}"
     },
    ],
