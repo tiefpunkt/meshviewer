@@ -1,5 +1,5 @@
 define({
-  "dataPath": "http://map.freifunk-muenchen.de/data/",
+  "dataPath": "https://ffmuc.net/data/",
   "siteName": "Freifunk München",
   "mapSigmaScale": 0.5,
   "showContact": true,
