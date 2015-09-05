@@ -29,7 +29,8 @@ define({
   "mapLayers": [
     {
       "name": "Karte (OSM Humanitarian)",
-      "provider": "OpenStreetMap.HOT",
+      //"provider": "OpenStreetMap.HOT",
+      "url": "https://ffmuc.net/map/tiles/osmhot/{z}/{x}/{y}.png",
       "config": {
         "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap contributors</a>. Tiles courtesy of <a href=\"http://hot.openstreetmap.org\" target=\"_blank\">Humanitarian OpenStreetMap Team</a>",
         "maxZoom": 20
@@ -37,33 +38,10 @@ define({
     },
     {
       "name": "Karte (OSM Mapnik)",
-      "provider": "OpenStreetMap",
+      //"provider": "OpenStreetMap",
+      "url": "https://ffmuc.net/map/tiles/osm/{z}/{x}/{y}.png",
       "config": {
         "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap contributors</a>. ♥ <a href=\"http://donate.openstreetmap.org\" class=\"donate-attr\">Make a Donation</a>"
-      }
-    },
-    {
-      "name": "Karte (MapQuest Open)",
-      "provider": "MapQuestOpen",
-      "config": {
-        "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap contributors</a>. Tiles courtesy of <a href=\"http://www.mapquest.com/\" target=\"_blank\">MapQuest</a> <img src=\"https://developer.mapquest.com/content/osm/mq_logo.png\">",
-        "maxZoom": 19
-      }
-    },
-    {
-      "name": "Satellit (Bing)",
-      "provider": "Bing",
-      "config": {
-        "key": "Aiex7HstTT61uOhqmHRbtxFsOO8nd1LLpf_C1n30HPbzX0hvTO4TAAAWJWDZ0J5N",
-        "type": "AerialWithLabels",
-        "maxZoom": 20
-      }
-    },
-    {
-      "name": "Einfarbige Karte (CartoDB)",
-      "provider": "CartoDB",
-      "config": {
-        "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap contributors</a>. &copy; <a href=\"http://cartodb.com/attributions\">CartoDB</a>"
       }
     }
   ]
