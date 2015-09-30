@@ -5,25 +5,25 @@ define({
   "showContact": true,
   "maxAge": 14,
   "nodeInfos": [
-    { "name": "Clientstatistik (24 Stunden)",
-      "thumbnail": "https://ffmuc.net/stats/render/dashboard-solo/db/node?panelId=1&var-node_id={NODE_ID}&width=400&height=200&theme=light",
-      "href": "https://ffmuc.net/stats/dashboard/db/node?panelId=1&fullscreen&var-node_id={NODE_ID}",
-      "caption": "Knoten {NODE_ID}"
+    { "name": "Clients (1 Tag)",
+      "thumbnail": "https://ffmuc.net/stats/render/dashboard-solo/db/node?panelId=1&var-node_id={NODE_ID}&width=450&height=300&theme=light&from=now-24h",
+      "href": "https://ffmuc.net/stats/dashboard/db/node?var-node_id={NODE_ID}",
+      "caption": "Clients - Knoten {NODE_ID}"
     },
-    { "name": "Clientstatistik (7 Tage)",
-      "thumbnail": "https://ffmuc.net/stats/render/dashboard-solo/db/node?panelId=3&var-node_id={NODE_ID}&width=400&height=200&theme=light",
-      "href": "https://ffmuc.net/stats/dashboard/db/node?panelId=3&fullscreen&var-node_id={NODE_ID}",
-      "caption": "Knoten {NODE_ID}"
+    { "name": "Clients (7 Tage)",
+      "thumbnail": "https://ffmuc.net/stats/render/dashboard-solo/db/node?panelId=1&var-node_id={NODE_ID}&width=450&height=300&theme=light&from=now-7d",
+      "href": "https://ffmuc.net/stats/dashboard/db/node?var-node_id={NODE_ID}",
+      "caption": "Clients - Knoten {NODE_ID}"
     },
-    { "name": "Trafficstatistik (24 Stunden)",
-      "thumbnail": "https://ffmuc.net/stats/render/dashboard-solo/db/node?panelId=2&var-node_id={NODE_ID}&width=400&height=500&theme=light",
-      "href": "https://ffmuc.net/stats/dashboard/db/node?panelId=2&fullscreen&var-node_id={NODE_ID}",
-      "caption": "Knoten {NODE_ID}"
+    { "name": "Traffic (24 Stunden)",
+      "thumbnail": "https://ffmuc.net/stats/render/dashboard-solo/db/node?panelId=7&var-node_id={NODE_ID}&width=450&height=300&theme=light&from=now-24h",
+      "href": "https://ffmuc.net/stats/dashboard/db/node?var-node_id={NODE_ID}",
+      "caption": "Traffic - Knoten {NODE_ID}"
     },
-    { "name": "Trafficstatistik (7 Tage)",
-      "thumbnail": "https://ffmuc.net/stats/render/dashboard-solo/db/node?panelId=4&var-node_id={NODE_ID}&width=400&height=500&theme=light",
-      "href": "https://ffmuc.net/stats/dashboard/db/node?panelId=4&fullscreen&var-node_id={NODE_ID}",
-      "caption": "Knoten {NODE_ID}"
+    { "name": "Traffic (7 Tage)",
+      "thumbnail": "https://ffmuc.net/stats/render/dashboard-solo/db/node?panelId=7&var-node_id={NODE_ID}&width=450&height=300&theme=light&from=now-7d",
+      "href": "https://ffmuc.net/stats/dashboard/db/node?var-node_id={NODE_ID}",
+      "caption": "Traffic - Knoten {NODE_ID}"
     },
    ],
   "mapLayers": [
