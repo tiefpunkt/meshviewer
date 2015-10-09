@@ -16,16 +16,16 @@ define({
       "caption": "Clients - Knoten {NODE_ID}"
     },
     { "name": "Traffic (24 Stunden)",
-      "thumbnail": "https://ffmuc.net/stats/render/dashboard-solo/db/node?panelId=7&var-node_id={NODE_ID}&width=450&height=300&theme=light&from=now-24h",
+      "thumbnail": "https://ffmuc.net/stats/render/dashboard-solo/db/node?panelId=6&var-node_id={NODE_ID}&width=450&height=350&theme=light&from=now-24h",
       "href": "https://ffmuc.net/stats/dashboard/db/node?var-node_id={NODE_ID}",
       "caption": "Traffic - Knoten {NODE_ID}"
     },
     { "name": "Traffic (7 Tage)",
-      "thumbnail": "https://ffmuc.net/stats/render/dashboard-solo/db/node?panelId=7&var-node_id={NODE_ID}&width=450&height=300&theme=light&from=now-7d",
+      "thumbnail": "https://ffmuc.net/stats/render/dashboard-solo/db/node?panelId=6&var-node_id={NODE_ID}&width=450&height=350&theme=light&from=now-7d",
       "href": "https://ffmuc.net/stats/dashboard/db/node?var-node_id={NODE_ID}",
       "caption": "Traffic - Knoten {NODE_ID}"
     },
-   ],
+  ],
   "mapLayers": [
     {
       "name": "Karte (OSM Humanitarian)",
