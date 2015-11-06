@@ -253,6 +253,13 @@ button.close {
   }
 }
 
+button.copy {
+  margin-left: 10px;
+  &:after {
+    content: '\f41c';
+  }
+}
+
 .sidebar h2, .sidebar h3 {
   padding-left: $buttondistance;
   padding-right: $buttondistance;
