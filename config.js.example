@@ -1,13 +1,38 @@
 define({
-  "dataPath": "https://map.luebeck.freifunk.net/data/",
-  "siteName": "Freifunk Lübeck",
+  "dataPath": "http://sensors.tiefpunkt.com/data/",
+  "siteName": "Munich Air Quality Network",
+  "siteURL": "https://ffmuc.net/map/",
   "mapSigmaScale": 0.5,
   "showContact": true,
   "maxAge": 14,
+  "nodeInfos": [
+    { "name": "Feinstaub (1 Tag)",
+      "thumbnail": "http://beta.tiefpunkt.com:3000/render/dashboard-solo/db/particulate-matter-sensor?from=now-24h&to=now&var-node={NODE_ID}&panelId=1&width=450&height=300&theme=light",
+      //https://ffmuc.net/stats/render/dashboard-solo/db/node?panelId=1&var-node_id={NODE_ID}&width=450&height=300&theme=light&from=now-24h",
+      "href": "http://beta.tiefpunkt.com:3000/dashboard/db/particulate-matter-sensor?var-node={NODE_ID}",
+      "caption": "Feinstaub - Sensor {NODE_ID}"
+    },
+    { "name": "Feinstaub (7 Tage)",
+      "thumbnail":"http://beta.tiefpunkt.com:3000/render/dashboard-solo/db/particulate-matter-sensor?from=now-7d&to=now&var-node={NODE_ID}&panelId=1&width=450&height=300&theme=light",
+      "href": "http://beta.tiefpunkt.com:3000/dashboard/db/particulate-matter-sensor?var-node={NODE_ID}",
+      "caption": "Feinstaub - Sensor {NODE_ID}"
+    },
+    { "name": "Temperatur (24 Stunden)",
+      "thumbnail": "http://beta.tiefpunkt.com:3000/render/dashboard-solo/db/particulate-matter-sensor?from=now-24h&to=now&var-node={NODE_ID}&panelId=2&width=450&height=300&theme=light",
+      "href": "http://beta.tiefpunkt.com:3000/dashboard/db/particulate-matter-sensor?var-node={NODE_ID}",
+      "caption": "Traffic - Knoten {NODE_ID}"
+    },
+    { "name": "Temperatur (7 Tage)",
+      "thumbnail": "http://beta.tiefpunkt.com:3000/render/dashboard-solo/db/particulate-matter-sensor?from=now-7d&to=now&var-node={NODE_ID}&panelId=2&width=450&height=300&theme=light",
+      "href": "http://beta.tiefpunkt.com:3000/dashboard/db/particulate-matter-sensor?var-node={NODE_ID}",
+      "caption": "Traffic - Knoten {NODE_ID}"
+    },
+  ],
   "mapLayers": [
     {
-      "name": "Karte (Humanitarian)",
-      "provider": "OpenStreetMap.HOT",
+      "name": "Karte (OSM Humanitarian)",
+      //"provider": "OpenStreetMap.HOT",
+      "url": "https://ffmuc.net/map/tiles/osmhot/{z}/{x}/{y}.png",
       "config": {
         "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap contributors</a>. Tiles courtesy of <a href=\"http://hot.openstreetmap.org\" target=\"_blank\">Humanitarian OpenStreetMap Team</a>",
         "maxZoom": 20
@@ -15,38 +40,11 @@ define({
     },
     {
       "name": "Karte (OSM Mapnik)",
-      "provider": "OpenStreetMap",
+      //"provider": "OpenStreetMap",
+      "url": "https://ffmuc.net/map/tiles/osm/{z}/{x}/{y}.png",
       "config": {
-        "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap contributors</a>. ♥ <a href=\"http://donate.openstreetmap.org\" class=\"donate-attr\">Make a Donation</a>",
+        "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap contributors</a>. ♥ <a href=\"http://donate.openstreetmap.org\" class=\"donate-attr\">Make a Donation</a>"
       }
-    },
-    {
-      "name": "Karte (MapQuest Open)",
-      "provider": "MapQuestOpen",
-      "config": {
-        "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap contributors</a>. Tiles courtesy of <a href=\"http://www.mapquest.com/\" target=\"_blank\">MapQuest</a> <img src=\"https://developer.mapquest.com/content/osm/mq_logo.png\">",
-        "maxZoom": 19
-      }
-    },
-    {
-      "name": "Satelit (Bing)",
-      "provider": "Bing",
-      "config": {
-        "key": "<Your key>",
-        "type": "AerialWithLabels",
-        "maxZoom": 20
-      }
-    },
-    {
-      "name": "Einfarbige Karte (CartoDB)",
-      "provider": "CartoDB",
-      "config": {
-        "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap contributors</a>. &copy; <a href=\"http://cartodb.com/attributions\">CartoDB</a>"
-      }
-    },
-    {
-      "name": "Einfarbige Karte (Stamen Toner Lines)",
-      "provider": "Stamen.TonerLite"
     }
   ]
 })
